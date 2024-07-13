@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semanal</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+        }
+        body{
+            height: 1800px;
+            width: 100%;
+            background-color: rgb(58, 67, 124);
+        }
+        nav{
+            height: auto;
+            width: 100%;
+            background-color:  rgb(40, 41, 43);
+        }
+        nav section{
+            /* background-color: rgb(124, 124, 124); */
+            display: flex;
+            padding: 30px 0;
+            border-bottom: 5px solid #f0d13a;
+        }
+        .back{
+            /* position: absolute;
+            top: 0;
+            left: 0; */
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            color: white;
+            margin-left: 10px;
+}
+        main{
+            /* background-color:  rgb(56, 82, 129); */
+            /* background-color:  #f0d13a; */
+
+            height: 1300px;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .calendario{
+            color: white;
+            font-family: 'Poppins';
+            font-size: 120px;
+            margin-bottom: 30px;
+            text-shadow: 5px 5px 0px rgba(29, 29, 29, 0.336),
+            -5px 5px 0px rgba(119, 140, 241, 0.301);
+            animation: runT 2500ms ease-in-out alternate infinite;
+            margin: 0 auto ;
+            display: inline;
+        }
+        .wrap{
+            height: 300px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+        }
+        .wrap img{
+            height: 300px;
+            /* width: 300px; */
+            display: none;
+            position: relative;
+
+        }
+        @keyframes runT{
+            from{
+                text-shadow: 5px 5px 0px rgba(29, 29, 29, 0.336),
+                -5px 5px 0px rgba(119, 140, 241, 0.301);
+            color: white;
+
+            }
+            to{
+                text-shadow:  -10px 5px 0px rgba(29, 29, 29, 0.336), 5px 5px 0px rgba(119, 140, 241, 0.301);
+                color: rgb(223, 223, 223);
+
+            }
+        }
+        main section{
+            /* background-color:  rgb(103, 130, 182); */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .Caixa_2{
+            /* padding: 30px 80px; */
+            margin-top: 30px;
+            padding-bottom: 30px;
+            background-color:  rgb(40, 41, 43);
+            /* height: 100vh;
+            width: 80vw; */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;            
+        }
+
+        .container{
+            border: 1px solid f0d13a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border-top: 5px solid #f0d13a; */
+            width: 100%;
+        }
+        .container h1{
+            color: white;
+            font-family: 'Poppins';
+            font-size: 70px;
+        }
+        .container p a{
+            text-decoration: none;
+            list-style: none;
+            color: white;
+        }
+        .container p{
+            margin-top: 5px;
+        }
+        .separador{
+            border-bottom:  1px solid gray;
+            width: 50%;
+        }
+        .Caixa_1{
+            /* padding: 30px 80px; */
+            background-color:  rgb(40, 41, 43);
+            /* height: 100vh;
+            width: 80vw; */
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;            
+        }
+        .Caixa_1 ul{
+            margin: 0 10px;
+            /* margin-top: 60px; */
+            /* border: 1px solid black; */
+            margin-bottom: 10px;
+            padding-right: 10px;
+            border-right: 1px solid rgb(63, 63, 63);
+        }
+        .Caixa_1 ul li{
+            list-style: none;
+            height: 69.187px;
+            /* border: 1px solid black; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .Caixa_1 ul li span{
+            color: grey;
+            font-weight: 600;
+        }
+        .tile{
+            width: 186.456px;
+            height: 69.187px;
+            background-color: grey;
+            border-radius: 10px;
+            margin: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            outline: 5px solid rgb(29, 29, 29);
+            transition: transform 500ms ease-in-out;
+            box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.23);
+            overflow: hidden;
+
+        }
+        .tile:hover, .tile:hover span{
+            transform: scale(1.1);
+            text-shadow: 1px 1px #558abb71;
+            opacity: 1;
+        }
+        .tile span{
+            margin: 0 auto;
+            font-size: large;
+            color: white;
+            text-transform: uppercase;
+           text-shadow: 5px 5px #558abb71;
+           transition: all 500ms ease-in-out;
+           /* transform-style: preserve-3d; */
+           opacity: 0.8;
+        }
+        .semana{
+            display: flex;
+            justify-content: center;
+            margin: 30px 10px;
+            /* border: 1px solid black; */
+            border-bottom: 1px solid rgb(63, 63, 63);
+        }
+        .semana p{
+            display: inline;
+            text-align: center;
+            padding: 20px 0;
+            color: grey;
+
+        }
+        .segunda, .terca, .quarta, .quinta, .sexta{
+            margin: 10px 0;
+            /* border: 1px solid rgba(0, 0, 0, 0.219); */
+            border-radius: 10px;
+            transition: transform 200ms ease-in-out;
+        }
+        /* .segunda:hover, .terca:hover, .quarta:hover, .quinta:hover, .sexta:hover{
+            transform: scale(1.05);
+            background-color: rgb(46, 46, 46);
+            transition: all 50ms ease-in-out;
+        } */
+        .week{
+            /* background-color: rgba(209, 73, 73, 1); */
+            background-image: url(imagens/Tiles/Rectangle\ 2-r.png); 
+            transition: background-image 700ms ease-in-out;
+        }
+        .cine{
+            /* transition: background-color 700ms ease-in-out; */
+            transition: background-image 700ms ease-in-out;
+            /* background-color: rgba(85, 185, 191, 1); */
+            background-image: url(imagens/Tiles/Rectangle\ 2-b.png);
+
+        }
+        .retro{
+            transition: background-image 700ms ease-in-out;
+            /* background-color: #f0d13a; */
+            background-image: url(imagens/Tiles/Rectangle\ 2-bb.png);
+
+        }
+        .pix{
+            transition: background-image 700ms ease-in-out;
+            /* background-color: rgb(98, 106, 180); */
+            background-image: url(imagens/Tiles/Rectangle\ 2-y.png);
+
+        }
+        .zawards{
+            transition: background-image 700ms ease-in-out;
+            /* background-color: rgb(98, 106, 180); */
+            background-image: url(imagens/Tiles/Rectangle\ z.png);
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <section>
+            <a href="index.html" class="back">Voltar</a>
+        
+        </section>
+    </nav>
+    <main>
+        <div class="wrap">
+            <h1 class="calendario">Calendário</h1>
+            <img src="imagens/Tiles/rip.png" id="rip">
+        </div>
+        <section>
+            <div class="Caixa_1">
+            
+                    <ul>
+                        <li><span>15:00</span>
+                            <span>15:30</span>
+                        </li>
+                        <li><span>16:00</span>
+                            <span>16:30</span>
+                        </li>
+                        <li><span>17:00</span>
+                            <span>17:30</span>
+                        </li>
+                        <li><span>18:00</span>
+                            <span>18:30</span>
+                        </li>
+                        <li><span>19:00</span>
+                            <span>19:30</span>
+                        </li>
+                        <li><span>20:00</span>
+                            <span>20:30</span>
+                        </li>
+                        <!-- <li><span>21:00</span>
+                            <span>21:30</span>
+                        </li> -->
+                    </ul>
+                    <div class="segunda">
+                        <div class="semana">
+                            <p>Segunda</p>
+                        </div>
+
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                    </div>
+                    <div class="terca">
+                        <div class="semana">
+                            <p>Terça</p>
+                        </div>
+                        <div class="tile cine" data-w="2"><span>cine</span></div>
+                        <div class="tile cine" data-w="2"><span>cine</span></div>
+                        <div class="tile cine" data-w="2"><span>cine</span></div>
+                        <div class="tile retro" data-w="3"><span>retro</span></div>
+                        <div class="tile retro" data-w="3"><span>retro</span></div>
+                        <div class="tile retro" data-w="3"><span>retro</span></div>
+                    </div>
+                    <div class="quarta">
+                        <div class="semana">
+                            <p>Quarta</p>
+                        </div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                    </div>
+                    <div class="quinta">
+                        <div class="semana">
+                            <p>Quinta</p>
+                        </div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                    </div>
+                    <div class="sexta">
+                        <div class="semana">
+                            <p>Sexta</p>
+                        </div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                    </div>
+            </div>
+            <div class="Caixa_2">
+                <div class="container">
+                    <h1>Info</h1>
+                    <div class="separador"></div>
+                    <p>acesse a <a href="https://docs.google.com/spreadsheets/d/1hQi15eYM0RtbetjqZwoq0wLd7wDILBGUngzUryxAIV0/edit?gid=0#gid=0">Planilha</a> para obter Mais informações sobre Pix e Tetrovejando.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+       </ul>
+</footer>
+<script>
+    let tile = [...document.querySelectorAll(".tile")];
+    tile.forEach((e)=>{
+        e.addEventListener('click', next);
+    });
+
+    function next(e){
+        let s = this.className
+        console.log(s)
+        if(s.includes('week')) {
+            this.classList.remove('week')
+            this.classList.add('cine')
+            this.firstChild.textContent = 'cine'
+        };
+        if(s.includes('cine')) {
+            this.classList.remove('cine')
+            this.classList.add('retro')
+            this.firstChild.textContent = 'retro'
+        };
+        if(s.includes('retro')) {
+            this.classList.remove('retro')
+            this.classList.add('pix')
+            this.firstChild.textContent = 'pix'
+        };
+        if(s.includes('pix')) {
+            this.classList.remove('pix')
+            this.classList.add('zawards')
+            this.firstChild.textContent = 'zawards'
+        };
+        if(s.includes('zawards')) {
+            this.classList.remove('zawards')
+            this.classList.add('week')
+            this.firstChild.textContent = 'semanal'
+        };
+    }
+    let calendario = document.querySelector('.calendario');
+    let rip = document.getElementById('rip')
+
+    calendario.addEventListener('dblclick', ()=>{
+        calendario.style.display = 'none'
+        rip.style.display = 'block'
+        tile.forEach((e)=>{
+            e.classList.remove('retro')
+            e.classList.remove('pix')
+            e.classList.remove('cine')
+            e.classList.add('week')
+            e.firstChild.textContent = 'estreia☠️'
+    });
+    })
+
+</script>
+</body>
+</html>
