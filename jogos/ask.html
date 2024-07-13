@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="styleG.css">
+</head>
+<body>
+  <a href="../index.html"><span>Voltar</span></a>
+  <div>
+    <div id="feixeDeLuz"></div>
+    
+  <p  class="ballom">essa é a sua opinião</p>
+   <img src="../video/thunderbitbot.gif">
+    <input type="text" placeholder="Diga algo ao T-bot" />
+  </div>
+
+
+  
+  <script>
+    let input = document.querySelector('input')
+    let p = document.querySelector('p')
+    let audio = new Audio()
+    let audioback 
+    audioback = 0
+    
+    input.addEventListener('keyup', (e) =>{
+      if(e.key === 'Enter'){
+        
+        if(input.value.includes('rafa')){
+          p.style.display = 'block'
+          p.innerHTML = 'Cavalo'
+          input.value = ''
+
+          audio.src = '../audio/cavalo.mp3'
+          audio.play()
+        }
+          // else if (input.includes('quem e voce')){
+          //   p.style.display = 'block'
+          //   p.innerHTML = 'eu sou o Thunder-bot'
+          //   input.value = ''
+
+          
+          // }
+          else if (input.value == "smash"|| input.value.includes('sumash') ){
+            p.style.display = 'block'
+            p.innerHTML = 'Sssssssssmash'
+            input.value = ''
+
+            audio.src = '../audio/09_sumash.mp3'
+            audio.play()
+          }
+          else if (input.value == "kawai"|| input.value.includes('fofo') ){
+            p.style.display = 'block'
+            p.innerHTML = 'achei fofo'
+            input.value = ''
+
+            audio.src = '../audio/17_let-her-go.mp3'
+            audio.play()
+          }
+          else if (input.value == "cala boca"|| input.value.includes('calado') ){
+            p.style.display = 'block'
+            p.innerHTML = 'Escuta essa'
+            input.value = ''
+
+            audio.src = '../audio/16_cala-a-boca-puta_HhGAK6D.mp3'
+            audio.play()
+          }
+        else if (input.value == "denovo"|| input.value.includes('outra vez')|| input.value.includes('de novo') ){
+            p.style.display = 'block'
+            p.innerHTML = 'aconselhavel'
+            input.value = ''
+
+            audio.src = '../audio/12_elefedenovo.mp3'
+            audio.play()
+          }
+          
+        else if (input.value == "airton"|| input.value.includes('vitoria') ){
+              p.style.display = 'block'
+              p.innerHTML = ''
+              input.value = ''
+
+              audio.src = '../audio/13_ayrton-senna-tema-da-vitoria.mp3'
+              audio.play()
+            }
+        else if (input.value == "pindaiba"|| input.value.includes('sargeta') || input.value.includes('pessimo')|| input.value.includes('doido')){
+            p.style.display = 'block'
+            p.innerHTML = ''
+            input.value = ''
+
+            audio.src = '../audio/10_sargeta_final.mp3'
+            audio.play()
+          }
+          else if (input.value.includes('shadow') || input.value.includes('robotinik')){
+            p.style.display = 'block'
+            p.innerHTML = 'ele nem é um robô'
+            input.value = ''
+
+            audio.src = '../audio/11_robotnik-xingando-shadow.mp3'
+            audio.play()
+          }
+        else if (input.value == 'a' || input.value == 'aa' || input.value == 'aaa'){
+              p.style.display = 'block'
+              p.innerHTML = '(oi formal)'
+              input.value = ''
+
+              audio.src = '../14_ahaaaahhhaAaaah.mp4a'
+              audio.play()
+            }
+          else if (input.value.includes('oi') || input.value.includes('olá')){
+            p.style.display = 'block'
+            p.innerHTML = '(oi formal)'
+            input.value = ''
+
+            audio.src = '../audio/oiku_final.mp3'
+            audio.play()
+          }
+          
+        else if (input.value.includes('igor')||input.value.includes('bebum') || input.value.includes('bebado') || input.value.includes('cerveja') || input.value.includes('jaku')){
+          p.style.display = 'block'
+          p.innerHTML = ''
+          input.value = ''
+
+          audio.src = '../audio/03_bebado.mp3'
+          audio.play()
+        }
+          else if (input.value.includes('corintiano')|| input.value.includes('corinthia') ||input.value.includes( 'corintia') || input.value.includes('corinthians') || input.value.includes('curintia') || input.value.includes('kurintia')){
+            p.style.display = 'block'
+            p.innerHTML = 'salve'
+            input.value = ''
+
+            audio.src = '../audio/08_corinthians.mp3'
+            audio.play()
+          }
+          
+          else if(input.value.includes('faça') || input.value.includes('me dê')){
+            p.style.display = 'block'
+            p.innerHTML = 'Eu não sigo ordens...'
+            input.value = ''
+            
+            audio.src = '../audio/vou-nada.mp3'
+            audio.play()
+          }
+          else if (input.value.includes('quando acaba') || input.value.includes('acabar') || input.value.includes('até quando') || input.value.includes('que demora') || input.value.includes('tem que acabar') || input.value.includes('não aguento')){
+            p.style.display = 'block'
+            p.innerHTML = 'por favor'
+            input.value = ''
+
+            audio.src = '../audio/01_acabapelamor.mp3'
+            audio.play()
+          }
+            else if (input.value.includes('em fim') || input.value.includes('acabou') || input.value.includes('finalmente') || input.value.includes('enfim') || input.value.includes('terminou') || input.value.includes('ja era')){
+              p.style.display = 'block'
+              p.innerHTML = '... ...'
+              input.value = ''
+
+              audio.src = '../audio/02_acabou.mp3'
+              audio.play()
+            }
+              else if (input.value.includes('megumin') || input.value.includes('megumi') || input.value.includes('explosão') || input.value.includes('explosao')){
+                p.style.display = 'block'
+                p.innerHTML = 'explosion'
+                input.value = ''
+
+                audio.src = '../audio/04_explosion.mp3'
+                audio.play()
+              }
+              else if (input.value.includes('eren') || input.value.includes('yeagar') || input.value.includes('tentar') || input.value.includes('tentei')){
+                  p.style.display = 'block'
+                  p.innerHTML = 'ja é hora'
+                  input.value = ''
+
+                  audio.src = '../audio/05_tentei.mp3'
+                  audio.play()
+                }
+                else if (input.value.includes('amo você') || input.value.includes('amor') || input.value.includes('gosto de') || input.value.includes('te amo')){
+                  p.style.display = 'block'
+                  p.innerHTML = 'calma ai, não fui programado para isso'
+                  input.value = ''
+
+                  audio.src = '../audio/06_paizao.mp3'
+                  audio.play()
+                }
+                else if (input.value.includes('gay')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/10_uncer.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('bakuretsu') ){
+                    p.style.display = 'bakuretsu bakuretsu'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/20_bakuretsu.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('renascer') ||
+                   input.value.includes('morte') || input.value.includes('rezero') || input.value.includes('subaru')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/21_rezero.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('sus') ||
+                   input.value.includes('amogus') || input.value.includes('umugus') || input.value.includes('omugus')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/22_amogus.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('delicia') ||
+                   input.value.includes('gostoso') || input.value.includes('sensual') || input.value.includes('sexy')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/29_anime-ahh.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('corse') ||
+                   input.value.includes('escuta esse') || input.value.includes('esse som') || input.value.includes('motor')){
+                    p.style.display = 'belo corsa'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/23_corsa.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('fugi') ||
+                   input.value.includes('teleport') || input.value.includes('onde vai') || input.value.includes('indo')){
+                    p.style.display = 'block'
+                    p.innerHTML = 'fui'
+                    input.value = ''
+
+                    audio.src = '../audio/24_dbz-teleport.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('gripado') ||
+                   input.value.includes('gripe') || input.value.includes('resfriado') || input.value.includes('doente')){
+                    p.style.display = 'block'
+                    p.innerHTML = 'saúde'
+                    input.value = ''
+
+                    audio.src = '../audio/25_gripadinha.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('dano') ||
+                   input.value.includes('dor') || input.value.includes('emocional') || input.value.includes('doeu')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/26_emotionalDamage.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('festa') ||
+                   input.value.includes('junho') || input.value.includes('meio de ano') || input.value.includes('comemorar')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/27_festa-junina.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('lula') ||
+                   input.value.includes('feijão') ){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/28_lula-feijao-puro.mp3'
+                    audio.play()
+                  }
+                else if (input.value.includes('estranho') ||
+                   input.value.includes('o que aconteceu') || input.value.includes('loucura') || input.value.includes('doidera')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/'
+                    audio.play()
+                  }
+                else if (input.value.includes('chaves') ||
+                   input.value.includes('kiko') || input.value.includes('que peninha') || input.value.includes('triste')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/18_chaves.mp3'
+                    audio.play()
+                  }
+                  else if (input.value.includes('rudeos') || input.value.includes('mushoku') || input.value.includes('fimose') || input.value.includes('pau')){
+                    p.style.display = 'block'
+                    p.innerHTML = '...'
+                    input.value = ''
+
+                    audio.src = '../audio/07_mushoku.mp3'
+                    audio.play()
+                  }
+        else{
+        p.style.display = 'block'
+        p.innerHTML = 'Essa é a sua opinião'
+        input.value = ''
+        }
+        
+      }
+      
+       if(e.key === 'Backspace'){
+        audioback = audioback + 1
+        }
+        if(audioback>10){
+        audio.src = '../audio/escreve-e-apaga.mp3'
+        audio.play()
+        
+      }
+    })
+  </script>
+</body>
+</html>
