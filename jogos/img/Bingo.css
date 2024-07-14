@@ -45,6 +45,18 @@ h1{
   flex-direction: row;
 }
 
+.selected::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(41, 41, 41);
+  /* filter:  opacity(1); */
+  mix-blend-mode: multiply;
+  transition: all 1050ms ease ;
+} 
 #kiriface::before{
   content: "";
   position: absolute;
@@ -57,10 +69,10 @@ h1{
   mix-blend-mode: multiply;
   animation: kirito 1500ms linear infinite alternate;
 } 
-section div:not(#kiriface):hover::before{
+/* section div:not(#kiriface):hover::before{
   background-color: transparent;
   transition: background-color 500ms;
-}
+} */
 section div{
   background-color: #000000;
   height: 150px;
@@ -79,23 +91,30 @@ p{
     font-size: 48px;
     color: #b2e046;
     vertical-align: bottom;
-    opacity: .4;
-    animation: Bingo 500ms ;
+    opacity: 0;
+    /* animation-play-state: paused; */
     pointer-events: none;
+  }
+  .bingo{
+    opacity: .9;
+    animation-play-state: running;
+    animation: Bingo 500ms ;
+    color: #b2e046;
 }
 span{
   background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(28,28,27,1) 55%, rgba(255,255,255,0) 91%); 
-  color: white;
+  color: rgb(207, 207, 207);
   position: absolute;
   padding: 10px 0;
   width: 100%;
   HEIGHT: 60PX;
   bottom: 0;
   opacity: 1;
-  transition: opacity 200ms ease-in ;
+  transition: opacity 400ms ease-in ;
 }
 section div:hover span{
-  transition: opacity 800ms ease-in ;
+  transition: opacity 200ms ease-in ;
+  color: rgb(248, 248, 248);
   opacity: 1;
 }
 @keyframes kirito{
@@ -116,10 +135,11 @@ section div:hover span{
     transform: scale(0,5);
   }
 }
-/* section div:hover{
-  filter: brightness(1);
-  transition: filter 500ms ;
-} */
+section div:hover{
+  /* filter: brightness(1);
+  transition: filter 500ms ; */
+  outline: 3px solid rgb(58, 58, 211);
+}
 .tile1{
     background-image: url(bingoImg/1_kirito.jpg);
     background-size: cover;
@@ -219,7 +239,7 @@ section div:hover span{
     background-position-x: 0px;
 }
 .tile16{
-    background-image: url(bingoImg/16_confirmado.mp4);
+    background-image: url(bingoImg/16_confirmado.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: 0px;
@@ -241,7 +261,7 @@ video{
     background-size: cover;
     background-repeat: no-repeat;
     background-position-x: -40px;
-    background-position-y: -28px;
+    background-position-y: -38px;
 }
 .tile19{
     background-image: url(bingoImg/19_sao.jpg);
@@ -278,6 +298,12 @@ video{
 }
 .tile24{
       background-image: url(bingoImg/24_ga.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: -55px;
+}
+.tile25{
+      background-image: url(bingoImg/25_smile.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position-x: -55px;
