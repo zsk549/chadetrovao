@@ -171,7 +171,6 @@ header .navbar> *:not(div):hover{
     display: flex;
     align-items: end;
     padding: 0;
-    opacity: .1;
 }
 .boxMain a img{
     height: 700px;
@@ -211,7 +210,7 @@ margin: 0px;
 #igor{
     position: absolute;
     left: 150px;
-    top: 430px;
+    top: 530px;
     z-index: 999;
     scale: 1.2;
     /* border: 1px solid black; */
@@ -298,7 +297,6 @@ margin: 0px;
     justify-content: flex-end;
     box-shadow: 0 0 0 2px rgb(255, 255, 255);
     transition: all 400ms ease-in-out;
-    opacity: .1;
 
 }
 .container2 div button{
