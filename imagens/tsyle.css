@@ -13,65 +13,24 @@ body{
     height: 1800px;
 
 }
-nav{
-    display: flex;
-    flex-direction: column;
-    background-color:transparent;
-    height: 100vh;
-    width: 4vmin;
-    position: fixed;
-    right: 0;
-    top: 0;
-    justify-content: center;
-    z-index: 999;
-}
-nav > div{
-    height: 10vh;
-    width: 800px;
-    transition: all 500ms ease-in-out;
-    position: relative;
-    flex: 0;
-    cursor: pointer;
-}
-nav > div:hover{
-    right: 10px;
-    transform: scale(1.2);
-    transition: all 500ms ease-in-out;
-}
-/* header{
-      display: flex;
-      transform: translateY( -10%);
-}
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <div class="dropdown">
-    <button class="dropbtn">Dropdown 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
-    </div>
-  </div> 
-</div> */
 
 header{
-    position: relative;
+    position: absolute;
     top: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background-color:  rgb(40, 41, 43);
-    height: 10vh;
+    padding-bottom: 20px;
     z-index: 10000;
 }
 header .navbar{
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-
 }
 header .navbar a{
     text-decoration: none;
@@ -460,4 +419,33 @@ iframe{
 
 .opacit{
     opacity: 1 !important;
+}
+@media (max-width: 992px){
+    .container{
+        display: none;
+    }
+    .container2 {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .container2 div article{
+        flex-direction: column;
+    }
+    .container2 div button{
+        margin-top: 30px;
+        position: relative;
+    }
+    .logo video{
+        display: none ;
+
+    }
+    .dropdown .dropdown-content{
+        display: flex;
+        flex-direction: column; 
+        z-index: 99999;
+        position: static;
+        top: -300px;
+        
+    }
 }
