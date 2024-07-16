@@ -449,3 +449,12 @@ iframe{
         
     }
 }
+@media (max-width: 1400px){
+    #igor{
+        left: 150px;
+        top: 390px;
+    }
+    .logo{
+        margin-top: 150px;
+    }
+}
