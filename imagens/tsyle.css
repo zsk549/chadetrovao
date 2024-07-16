@@ -169,7 +169,7 @@ margin: 0px;
 #igor{
     position: absolute;
     left: 150px;
-    top: 530px;
+    top: 470px;
     z-index: 999;
     scale: 1.2;
     /* border: 1px solid black; */
@@ -344,10 +344,6 @@ margin: 0px;
 body{
     max-height: 100px;
 }
-iframe{
-    width: 100vw;
-    margin: 20px;
-}
 .new{
     border: 5px solid rgb(255, 209, 1);
     background-color: rgb(40, 41, 43); 
@@ -397,6 +393,8 @@ iframe{
     align-items: center;
     border: 5px solid rgba(0, 0, 0, 0.123);
     border-radius: 35px;
+    margin-top: 90px;
+    z-index: 99999;
 } 
 #myVideo {
     /* position: relative; */
