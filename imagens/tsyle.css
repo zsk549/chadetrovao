@@ -92,23 +92,6 @@ header .navbar> *:not(div):hover{
     cursor: default;
 
 }
-
-/* .logo{
-    background-color: rgb(51, 58, 110);
-    padding-top: 15px;
-    color: whitesmoke;
-    width: 100vh;
-    height: 300px;
-    margin: 50px auto;
-    text-align: center;
-    font-size: 8rem;
-    font-weight: bolder;
-    letter-spacing: -5px;
-    line-height: 8rem;
-    overflow: hidden;
-} */
-
-
 .container{
     /* background-color: rgb(40, 41, 43); */
     display: flex;
@@ -385,8 +368,8 @@ body{
     background-color:transparent;
     backdrop-filter: blur(7px);
     margin: 50px auto;
-    width: 120vh;
-    height: 400px;
+    width: auto;
+    height: 80vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -394,13 +377,17 @@ body{
     border: 5px solid rgba(0, 0, 0, 0.123);
     border-radius: 35px;
     margin-top: 90px;
-    z-index: 99999;
+    position: relative;
+    z-index: 9999 !important;
 } 
-#myVideo {
+.logo>*{
+    position: relative;
     /* position: relative; */
-    width: 120vh;
-    height: 400px;
+    z-index: 9999 !important;
 }
+
+
+
 .A1{
     background-image: url(A123/A1.png);
     background-size: cover;
