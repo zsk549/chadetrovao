@@ -13,7 +13,11 @@
     <div id="feixeDeLuz"></div>
     
   <p  class="ballom">essa é a sua opinião</p>
-   <img src="../video/thunderbitbot.gif">
+   <div class="wrap" onclick="remove()">
+    <div class="gbaCapa"></div>
+    <div class="gba"></div>
+    <img src="../video/thunderbitbot.gif">
+    </div>
     <input type="text" placeholder="Diga algo ao T-bot" />
   </div>
 
@@ -323,6 +327,13 @@
         
       }
     })
+    let x = 9
+    function remove(){
+      if(x<0) return
+      document.querySelector(".gbaCapa").style.opacity = '0.'+ x;
+      x--
+      requestAnimationFrame(remove)
+    }
   </script>
 </body>
 </html>
