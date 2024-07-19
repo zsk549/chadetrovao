@@ -22,16 +22,22 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     background-color:  rgb(40, 41, 43);
     padding-bottom: 20px;
     z-index: 10000;
+    border-bottom: 5px solid #f0d13a;
+    margin-bottom: 0;
+
 }
 header .navbar{
     display: flex;
+    align-items: flex-end;
+
     flex-wrap: wrap;
     gap: 15px;
 }
+
 header .navbar a{
     text-decoration: none;
     text-align: center;
@@ -65,11 +71,11 @@ header .navbar> *:not(div):hover{
 .dropdown-content{
     display: none;
     position: absolute ;
-    margin: 5px 10px;
+    margin: 0px 10px;
     cursor: pointer;
     background-color: rgb(40, 41, 43)!important; 
     gap: 5px;
-    padding: 10px;
+    padding: 20px 10px;
     
 }
 .dropdown:hover .dropdown-content{
