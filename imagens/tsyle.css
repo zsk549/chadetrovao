@@ -11,7 +11,7 @@ body{
     background-color: rgb(58, 67, 124);
     overflow-x: hidden;
     height: 1800px;
-
+    
 }
 
 header{
@@ -391,7 +391,9 @@ body{
     /* position: relative; */
     z-index: 9999 !important;
 }
-
+video{
+    display: none;
+}
 
 
 .A1{
@@ -412,6 +414,18 @@ body{
     opacity: 1 !important;
 }
 @media (max-width: 992px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr  1fr  1fr;
+    }
+    .navbar{
+        grid-column-start: 2;
+        align-items: center;
+        justify-content: center;
+    }
+    header .navbar a{
+        font-size: 20px;
+    }
     .container{
         display: none;
     }
@@ -447,5 +461,11 @@ body{
     }
     .logo{
         margin-top: 150px;
+    }
+    video{
+        display: block;
+    }
+    #spline{
+        display: none;
     }
 }
