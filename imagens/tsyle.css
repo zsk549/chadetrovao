@@ -369,7 +369,9 @@ body{
     90%{transform: translateY(-20vh) scale(0.7) rotate(720deg); opacity: 0.5;}
     100%{opacity: 0; transform: translateY(-40vh) scale(0.1) rotate(1080deg);}
 }
-
+#spline{
+    scale: 1.2;
+}
 .logo{
     background-color:transparent;
     backdrop-filter: blur(7px);
