@@ -99,8 +99,9 @@
         }
         .Caixa_2{
             /* padding: 30px 80px; */
-            margin-top: 30px;
+            margin-top: 10px;
             padding-bottom: 30px;
+            padding: 0px 200px 30px;
             background-color:  rgb(40, 41, 43);
             /* height: 100vh;
             width: 80vw; */
@@ -151,7 +152,9 @@
             flex-direction: row;
             flex-wrap: wrap;
             border-radius: 5px;
-            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;            
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;  
+            padding-bottom: 30px;   
+            padding-right: 30px;       
         }
         .Caixa_1 ul{
             margin: 0 10px;
@@ -203,6 +206,8 @@
            transition: all 500ms ease-in-out;
            /* transform-style: preserve-3d; */
            opacity: 0.8;
+           /* pointer-events: none; */
+           text-align: center;
         }
         .semana{
             display: flex;
@@ -259,20 +264,84 @@
             background-image: url(imagens/Tiles/Rectangle\ z.png);
 
         }
+        #sec_1{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        pre{
+            background-color: rgb(40, 41, 43);
+            padding: 10px 400px;
+            margin: 10px 0 0;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;            
+
+        }
+        button:active{
+            scale: .9;
+        }
+        button{
+            background-color: #292928;
+            border: 2px solid white;
+            color: white;
+            padding: 20px 80px;
+            border-radius: 5px;
+            font-family: "Press Start 2P", system-ui;
+            font-weight: 400;
+            font-style: normal;
+            position: relative;
+            overflow: hidden;
+            transition: all 375ms ease-in-out;
+            cursor: pointer;
+        }
+        .btn::after{
+            animation: loading 2000ms linear ;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 20px 0 0 0;
+            background-color: rgb(40, 40, 184);
+            height: 100%;
+            width: 0%;
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+            transition: all 1s ease-in-out ;
+        }
+        @keyframes loading{
+            0%{
+                width: 0%;
+
+            }
+            50%{
+            width: 100%;
+            }
+            100%{
+            content: "Sucesso!";
+            /* background-color: rgb(135, 166, 222); */
+            width: 100%;
+            }
+        }
          @media (max-width: 940px){
          
              .calendario{
                 display: none;
-             }
-             body{
-                display: grid;
-                row-gap: 1000px;
-                grid-template-rows: 3fr 5fr 1fr;
-             }
-             .Caixa_1{
+            }
+            body{
+               display: flex;
+               justify-content: center;
+               align-items: flex-end;
+               width: 100vw;
+            }
+            .Caixa_1{
+                
                 justify-content: center;
+                width: 300px;
              }
         }
+
     </style>
 </head>
 
@@ -288,7 +357,7 @@
             <h1 class="calendario">Calendário</h1>
             <img src="imagens/Tiles/rip.png" id="rip">
         </div>
-        <section>
+        <section id="sec_1">
             <div class="Caixa_1">
             
                     <ul>
@@ -310,6 +379,9 @@
                         <li><span>20:00</span>
                             <span>20:30</span>
                         </li>
+                        <li><span>21:00</span>
+                            <span>21:30</span>
+                        </li>
                         <!-- <li><span>21:00</span>
                             <span>21:30</span>
                         </li> -->
@@ -319,58 +391,66 @@
                             <p>Segunda</p>
                         </div>
 
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="1"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="2"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="3"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="4"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="5"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="6"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="7"><span contenteditable="true">semanal</span></div>
                     </div>
                     <div class="terca">
                         <div class="semana">
                             <p>Terça</p>
                         </div>
-                        <div class="tile cine" data-w="2"><span>cine</span></div>
-                        <div class="tile cine" data-w="2"><span>cine</span></div>
-                        <div class="tile cine" data-w="2"><span>cine</span></div>
-                        <div class="tile retro" data-w="3"><span>retro</span></div>
-                        <div class="tile retro" data-w="3"><span>retro</span></div>
-                        <div class="tile retro" data-w="3"><span>retro</span></div>
+                        <div class="tile cine" data-w="8"><span contenteditable="true">cine</span></div>
+                        <div class="tile cine" data-w="9"><span contenteditable="true">cine</span></div>
+                        <div class="tile cine" data-w="10"><span contenteditable="true">cine</span></div>
+                        <div class="tile retro" data-w="11"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro" data-w="12"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro" data-w="13"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro" data-w="14"><span contenteditable="true">retro</span></div>
                     </div>
                     <div class="quarta">
                         <div class="semana">
                             <p>Quarta</p>
                         </div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
-                        <div class="tile pix" data-w="4"><span>pix</span></div>
+                        <div class="tile pix" data-w="15"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="16"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="17"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="18"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="19"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="21"><span contenteditable="true">pix</span></div>
+                        <div class="tile pix" data-w="22"><span contenteditable="true">pix</span></div>
                     </div>
                     <div class="quinta">
                         <div class="semana">
                             <p>Quinta</p>
                         </div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
-                        <div class="tile retro"  data-w="3"><span>retro</span></div>
+                        <div class="tile retro"  data-w="23"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="24"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="25"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="26"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="27"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="28"><span contenteditable="true">retro</span></div>
+                        <div class="tile retro"  data-w="29"><span contenteditable="true">retro</span></div>
                     </div>
                     <div class="sexta">
                         <div class="semana">
                             <p>Sexta</p>
                         </div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
-                        <div class="tile week" data-w="1"><span>semanal</span></div>
+                        <div class="tile week" data-w="30"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="31"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="32"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="33"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="34"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="35"><span contenteditable="true">semanal</span></div>
+                        <div class="tile week" data-w="36"><span contenteditable="true">semanal</span></div>
                     </div>
-            </div>
+                </div>
+                <pre><button>Salvar</button></pre>
+                </section>
+                <section>
             <div class="Caixa_2">
                 <div class="container">
                     <h1>Info</h1>
@@ -388,15 +468,49 @@
         <li></li>
        </ul>
 </footer>
-<script>
+<script >
     let tile = [...document.querySelectorAll(".tile")];
+    let rayMan = JSON.parse(localStorage.getItem("til")) || []
+    let btn = document.querySelector('button')
+    btn.addEventListener('click', salvarcon)
+    if(rayMan) goto()
+    function salvarcon(index, classe, txt){
+            btn.classList.toggle('btn')
+            setTimeout(()=>{
+                btn.classList.toggle('btn')
+            },2500)
+            rayMan = []
+            tile.forEach( e=> {
+                rayMan.push({
+                    i: e.dataset.w,
+                    c: e.className,
+                    t: e.firstChild.textContent
+                    
+                });
+            });
+            console.log(rayMan)
+            localStorage.setItem("til", JSON.stringify(rayMan));
+    }
+
+            function goto(){
+                if(rayMan){
+                    rayMan.forEach((e, index)=>{
+                      // console.log(tile[index].firstChild.textContent)
+                        tile[index].className = e.c
+                        tile[index].firstChild.textContent = e.t
+                    });
+                }
+            }
+        
+
+    //
     tile.forEach((e)=>{
-        e.addEventListener('click', next);
+        e.addEventListener('dblclick', next);
     });
 
     function next(e){
         let s = this.className
-        console.log(s)
+        //console.log(e.target.firstChild.textContent)
         if(s.includes('week')) {
             this.classList.remove('week')
             this.classList.add('cine')
