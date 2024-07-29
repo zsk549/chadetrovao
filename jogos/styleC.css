@@ -14,7 +14,8 @@ body{
   
 }
 .jogo {
-  background-color: rgb(65, 75, 133);
+  background-color: rgb(196, 198, 209);
+  /* background-color: rgb(65, 75, 133); */
   display: grid;
   grid-template-columns: repeat(4, 8rem);
   grid-template-rows: repeat(4, 8rem);
@@ -45,7 +46,9 @@ body{
   border-radius: 10px;
 }
 .back{
-  background-color: rgb(75, 61, 99);
+  /* background-color: rgb(75, 61, 99); */
+  background-image: url(img/capa_1.png);
+  background-size: cover;
   backface-visibility: hidden;
 }
 img{
