@@ -41,13 +41,15 @@
           audio.src = '../audio/cavalo.mp3'
           audio.play()
         }
-          // else if (input.includes('quem e voce')){
-          //   p.style.display = 'block'
-          //   p.innerHTML = 'eu sou o Thunder-bot'
-          //   input.value = ''
-
+            else if (input.value =='quem é você' || input.value =='quem e'){
+            p.style.display = 'block'
+            p.innerHTML = 'eu sou o Thunder-bot'
+            input.value = ''
+            setTimeout(()=>{
+              p.innerHTML = 'eu toco audios' 
+            },1000)
           
-          // }
+          }
           else if (input.value == "smash"|| input.value.includes('sumash') ){
             p.style.display = 'block'
             p.innerHTML = 'Sssssssssmash'
