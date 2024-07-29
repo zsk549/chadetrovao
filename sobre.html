@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+            header{
+            position: relative;
+            top: 0;
+            width:100%;
+            height: 30px;
+            background-color: #a8bac9;
+            padding-bottom: 30px;
+            }
+            .header_link{
+                text-decoration: none;
+            }
+            h1{
+            font-size: 1.5rem;
+            }
+            p{
+              margin: 10px 0 100px 0;
+            }
+            .container{
+            background-color: #c9e8f0;
+            }
+            article{
+            display: grid;
+            grid-template-columns: 1fr 300px [content-start] 1fr [content-end] 300px 1fr;
+            grid-template-rows: 1fr 1fr  1fr ;
+            }
+            article > *{
+            grid-column: content;
+            }
+            article.quadrado_1{
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+            }
+            #_64{
+              height: 64px;
+              margin-bottom: 100px;
+            }
+            .desenhos{
+                height: 300px;
+            }
+            
+    </style>
+</head>
+<body>
+    <header><h1><a class="header_link" href="index.html">Voltar</a></h1></header>
+<div class="container">
+  <div class="text">
+  <article>
+    <p>Olá, aqui é o <a href="#">Zen </a>
+    <p>Sou apenas um humilde membro do chat que tem dislexia e gosta de fazer piadas ruins.</p>
+    <p>Essa página começou como apenas uma ideia despretenciosa.
+    Mas rapidamente comecei a me divertir mais e mais. Foi um ótimo objeto de estudo.</p>
+    <p>Comecei com as aulas em Março por meses fiquei só na pagina principal. Nos ultimos 15 dias de férias comecei e terminei
+         as outras seções do site.</p>
+    <p>fui atrás de pngs para o avatar de cada um da Ordem, infelizmente não achei nada para o Mauricio e felizmente não achei nada para o tigas</p>
+    <p>O modelo 3d foi uma das coisas que mais demorou, mas foi bem divertido, foi a primeira coisa que modelei na vida, talvez por isso não seja dos melhores heh.</p>
+    </article>
+    </div>
+    <div class="text">
+      <div class="imgs">
+        <article class="quadrado_1">
+         <section>
+          <img src="imagens/del_A.png" class="desenhos">
+          <img src="imagens/del_B.png" class="desenhos">
+          <img src="imagens/gbad_001.png" class="desenhos">
+          <img src="imagens/delC.png" class="desenhos">
+          <img src="imagens/64x64 tbot.png" id="_64" class="desenhos">
+          <img src="imagens/emiDelete.png" class="desenhos">
+         </section>
+            <p>aqui temos algumas ideias descartadas</p>
+        </article>
+        
+      </div>
+      <article>
+        <p>Espero que gostem do site mas utilizem apenas se quiserem, para mim o importante foi a jornada.</p>
+        <p>Adoro o trabalho de vocês por isso nunca fiquei entediado ou passei raiva fazendo isso aqui. Aprendi muito com esse Projeto
+          e tenho certeza que não conseguiria me esforçar tanto pra fazer tipo... sei lá um site de sapatos. Obrigado por tudo.
+        </p>
+      </article>
+    </div>
+</div>
+</body>
+</html>
