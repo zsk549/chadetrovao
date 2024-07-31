@@ -7,40 +7,100 @@
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
         *{
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+             font-weight: 400;
+              font-style: normal;
         }
         body{
             /*height: 1800px;*/
             width: 100%;
             background-color: rgb(58, 67, 124);
         }
-        nav{
-            height: auto;
-            width: 100%;
-            background-color:  rgb(40, 41, 43);
-        }
-        nav section{
-            /* background-color: rgb(124, 124, 124); */
-            display: flex;
-            padding: 30px 0;
-            border-bottom: 5px solid #f0d13a;
-        }
-        .back{
-            /* position: absolute;
-            top: 0;
-            left: 0; */
-            font-family: "Press Start 2P", system-ui;
-            font-weight: 400;
-            font-style: normal;
-            color: white;
-            margin-left: 10px;
+                                /* header start  */
+
+                                header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:  rgb(40, 41, 43);
+    padding-bottom: 20px;
+    z-index: 10000;
+    border-bottom: 5px solid #f0d13a;
+    margin-bottom: 0;
 }
+header .navbar{
+    display: flex;
+    align-items: flex-end;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+header .navbar a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 40px;
+    margin: 10px 0 0 0 ;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: "Poppins", sans-serif !important;
+    font-weight: 120 !important;
+    font-style: normal !important;
+}
+.dropdown{
+	display: flex;
+	justify-content: center;
+
+}
+.dropdown button{
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 48px;
+    margin: 10px 0 0 0 ;
+    color: #e1e1e1;
+    border: none;
+    background-color: transparent;
+     font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      
+}
+.dropdown-content{
+    display: none;
+    position: absolute ;
+    margin: 0px 10px;
+    cursor: pointer;
+    background-color: rgb(40, 41, 43)!important; 
+    gap: 5px;
+    padding: 20px 10px;
+}
+.dropdown:hover .dropdown-content{
+    display: flex;
+    flex-direction: column; 
+    
+}
+header .navbar> *:not(div):hover{
+    background-color: rgb(56, 57, 59);
+}
+.dropdown-content a:hover {
+    background-color: rgb(61, 62, 65);
+}
+.dropbtn{
+    border: none;
+    cursor: default;
+
+}
+                                /* Header end  */
         main{
             /* background-color:  rgb(56, 82, 129); */
             /* background-color:  #f0d13a; */
@@ -340,12 +400,21 @@
 </head>
 
 <body>
-    <nav>
-        <section>
-            <a href="index.html" class="back">Voltar</a>
-        
-        </section>
-    </nav>
+    <header>
+        <div class="navbar">
+            <a href="index.html">Chá de Trovão</a>
+            <a href="https://www.catarse.me/ChaDeTrovao" target="_blank">Catarse</a>
+        	<div class="dropdown">
+            		<button class="dropbtn">Games</button>
+        	<div class="dropdown-content">
+              	  <a href="jogos/cloyster.html">Jogo do Cloyster</a>
+              	  <a href="jogos/Bingo.html">Bingo</a>
+        	  <a href="jogos/ask.html">Pergunte ao T-bot</a>
+        	</div>
+        	</div> 
+            <a href="sobre.html">Sobre </a>
+        </div>
+    </header>
     <main>
         <div class="wrap">
             <h1 class="calendario">Calendário</h1>
