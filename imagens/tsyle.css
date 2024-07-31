@@ -310,7 +310,9 @@ footer{
 }
 
 
-
+#spline{
+    scale: 1.2;
+}
 
 
 
@@ -344,16 +346,16 @@ footer{
 
 
 @media (max-width: 992px){
-body{
+    body{
 	min-height: fit-content;
 }
-.logo{
+    .logo{
 	display: none;
 }
     header{
 	flex-direction: column;
 	position: relative;
-	margin: bottom: 300px;
+	margin-bottom: 300px;
 }
 	main{
 	margin-block: 900px;
@@ -384,8 +386,8 @@ body{
     }
     .container2 {
         flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	    justify-content: center;
+	    align-items: center;
         width: 100%;
         
     }
@@ -394,3 +396,4 @@ body{
 }
 
 }
+
