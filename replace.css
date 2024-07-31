@@ -1,0 +1,466 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: rgb(58, 67, 124);
+    overflow-x: hidden;
+    height: 1800px;
+    
+}
+
+header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    background-color:  rgb(40, 41, 43);
+    padding-bottom: 20px;
+    z-index: 10000;
+    border-bottom: 5px solid #f0d13a;
+    margin-bottom: 0;
+
+}
+header .navbar{
+    display: flex;
+    align-items: flex-end;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+header .navbar a{
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 40px;
+    margin: 10px 0 0 0 ;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 120;
+    font-style: normal;
+}
+header .navbar> *:not(div):hover{
+    background-color: rgb(56, 57, 59);
+}
+/* .dropdown {
+    background-color: rgb(46, 46, 46);
+} */
+.dropdown button{
+    text-decoration: none;
+    text-align: center;
+    padding: 12px 48px;
+    margin: 10px 0 0 0 ;
+    color: #e1e1e1;
+    background-color: transparent;
+     font-family: "Press Start 2P", system-ui;
+      font-weight: 400;
+      font-style: normal;
+      
+}
+.dropdown-content{
+    display: none;
+    position: absolute ;
+    margin: 0px 10px;
+    cursor: pointer;
+    background-color: rgb(40, 41, 43)!important; 
+    gap: 5px;
+    padding: 20px 10px;
+    
+}
+.dropdown:hover .dropdown-content{
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.dropdown-content a{
+    margin: 0 !important;
+    padding: 4px 0!important;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.dropdown-content a:hover {
+    background-color: rgb(61, 62, 65);
+}
+.dropbtn{
+    border: none;
+    cursor: default;
+
+}
+.container{
+    /* background-color: rgb(40, 41, 43); */
+    display: flex;
+    width: 600px;
+    height: 80vh;
+    margin: -300px auto;
+    margin-bottom: 200px;
+    transform: scale(1.27);
+    /* visibility: hidden;  */
+    z-index: 1;              
+}
+.box{
+    background-color: aliceblue;
+    margin: 10px;
+}
+.boxMain{
+    width: 100px;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    padding: 0;
+}
+.boxMain a img{
+    height: 700px;
+    position: relative;
+    top: 400px;
+    cursor: auto;
+    opacity: 0;
+    animation: show 3500ms ease-in-out forwards;
+}
+.boxMain a img{
+position: absolute;
+margin: 0px;
+/* opacity: 0.5; */
+}
+@keyframes show{
+    to{
+        opacity: 1;
+    }
+}
+
+#rapha{
+    left: -100px;
+    bottom: 100px;
+    padding-bottom: 200px;
+    margin-left: 50px;
+    transform: scale(1.1);
+    /* border: 1px solid black; */
+}
+#igor{
+    position: absolute;
+    left: 150px;
+    top: 470px;
+    z-index: 999;
+    scale: 1.2;
+    /* border: 1px solid black; */
+}
+#Thunder{
+    height: 500px;
+    transform: scaleX(-1);
+    left: -350px;
+    top: 500px;
+}
+#churras{
+    position: absolute;
+    left:250px;
+    top: 450px;
+    bottom:  10px;
+    /* z-index: 999; */
+    scale: 1.2;
+}
+
+.boxK{
+    content: "";
+    position: absolute;
+    top: 400px;
+    left: 480px;
+    width: 100px;
+    height: 100px;
+    /* border-radius: 50%; */
+    background-color: transparent;
+    cursor: auto;
+}
+.footer{
+    /* background: rgb(58,67,124); */
+    /* background: linear-gradient(0deg, rgba(58,67,124,1) 30%, rgba(73,85,164,1) 45%, rgba(255,255,255,0) 100%);  */
+    background: linear-gradient(0deg, rgb(58, 67, 124) 30%, rgb(58, 67, 124) 45%, rgba(255,255,255,0) 100%); 
+    width: 100vw;
+    height: 580px;
+    position: absolute;
+    top: 1200px;
+}
+.containerBox{
+    display: none;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+    bottom: 1000px;
+    left: 100px;
+   
+}
+.boxW{
+    background-color: rgba(245, 245, 245, 0.411);
+    height: 300px;
+    width: 300px;
+    z-index: 999;
+    opacity: 0;
+    margin-right: 10px;
+    margin-left: -15px;
+    position: relative;
+    left: -50px;
+
+}
+.container2{
+    background-color: rgb(40, 41, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    padding: 10px;
+    /* height: 520px; */
+    margin: 150px auto;
+    margin-bottom: 200px;
+    transform: scale(1.27);
+    position: relative;
+    z-index: 99999;
+    border-radius: 3px;
+}
+.container2 div{
+    background-color: rgb(49, 49, 49);
+    height: 460px;
+    width: 160px;
+    margin: 0px 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    box-shadow: 0 0 0 2px rgb(255, 255, 255);
+    transition: all 400ms ease-in-out;
+
+}
+.container2 div button{
+    position: absolute;
+    bottom: 20px;
+    padding: 10px 30px;
+    margin: 10px 10px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    /* transition: transform 500ms ease-in-out; */
+    transition: color 500ms ease-in-out;
+}
+.container2 div button:hover{
+    background-color: whitesmoke;
+    color: rgb(170, 170, 170);
+}
+.container2 div button a{
+    text-decoration: none;
+    color: white;
+}
+#btn3{
+    padding: 10px 18px ;
+}
+.container2 div article{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 53%, rgba(0,0,0,0) 92%, rgba(255,255,255,0) 100%); 
+    height: 70%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 1200ms ease-in-out;
+}
+.container2 div:hover article{
+    opacity: 1;
+}
+.container2 div article span{
+    color: white;
+    margin: 0 10px;
+}
+.anime0{
+    background-image: url(In_01.gif) !important;
+    background-size: 400%;
+    background-position-x: center; 
+    background-repeat: no-repeat;
+    width: 360px !important;
+    height: 480px !important;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0px 0px;
+
+}
+.anime1{
+    background-image: url(In_02.gif) !important;
+    background-size: 400%;
+    background-position-x: center; 
+    background-repeat: no-repeat;
+    width: 360px !important;
+    height: 480px !important;
+    /* transform: scale(1.2); */
+    border: 2px solid white;
+    border-radius: 10px;
+    transition: all 5s ease-in-out;
+    margin: 0px 0px;
+    
+}
+.anime2{
+    background-image: url(In_03.gif) !important;
+    background-size: 400%;
+    background-position-x: center; 
+    background-repeat: no-repeat;
+    width: 360px !important;
+    height: 480px !important;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 0px 0px;
+    
+}
+
+
+body{
+    max-height: 100px;
+}
+.new{
+    border: 5px solid rgb(255, 209, 1);
+    background-color: rgb(40, 41, 43); 
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    position: absolute;
+    margin:  auto;
+}
+.nclass{
+    background-color: whitesmoke;
+    border: 1px solid black;
+   padding: 5px 100px;
+}
+.wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+}
+.wrapper span img{
+    height: 120px;
+    width: auto;
+}
+.wrapper span{
+    animation: flow calc(400s/ var(--i)) linear infinite;
+}
+@keyframes flow {
+    0%{transform: translateY(110vh) scale(0.5) rotate(0deg); opacity: 1;}
+    90%{transform: translateY(-20vh) scale(0.7) rotate(720deg); opacity: 0.5;}
+    100%{opacity: 0; transform: translateY(-40vh) scale(0.1) rotate(1080deg);}
+}
+#spline{
+    scale: 1.2;
+}
+.logo{
+    background-color:transparent;
+    backdrop-filter: blur(7px);
+    margin: 50px auto;
+    width: auto;
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid rgba(0, 0, 0, 0.123);
+    border-radius: 35px;
+    margin-top: 90px;
+    position: relative;
+    z-index: 9999 !important;
+} 
+.logo>*{
+    position: relative;
+    /* position: relative; */
+    z-index: 9999 !important;
+}
+video{
+    display: none;
+}
+
+
+.A1{
+    background-image: url(A123/A1.png);
+    background-size: cover;
+    background-origin: bottom;
+}
+.A2{
+    background-image: url(A123/A2.png);
+    background-size: cover;
+}
+.A3{
+    background-image: url(A123/A3.png);
+    background-size: cover;
+}
+
+.opacit{
+    opacity: 1 !important;
+}
+@media (max-width: 992px){
+    header{
+        display: grid;
+        grid-template-columns: 1fr  1fr  1fr;
+    }
+    .navbar{
+        grid-column-start: 2;
+        align-items: center;
+        justify-content: center;
+    }
+    header .navbar a{
+        font-size: 20px;
+    }
+    .container{
+        display: none;
+    }
+    .container2 {
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .container2 div article{
+        flex-direction: column;
+    }
+    .container2 div button{
+        margin-top: 30px;
+        position: relative;
+    }
+    .logo video{
+        display: none ;
+
+    }
+    .dropdown .dropdown-content{
+        display: flex;
+        flex-direction: column; 
+        z-index: 99999;
+        position: static;
+        top: -300px;
+        
+    }
+}
+@media (max-width: 1400px){
+    #igor{
+        left: 150px;
+        top: 390px;
+    }
+    .logo{
+        margin-top: 150px;
+    }
+    video{
+        display: block;
+    }
+    #spline{
+        display: none;
+    }
+}
