@@ -7,6 +7,22 @@
     <link rel="stylesheet" href="img/Bingo.css">
 </head>
 <body>
+  <header>
+    <div class="navbar">
+      <a href="../index.html">Chá de Trovão</a>
+      <a href="https://www.catarse.me/ChaDeTrovao" target="_blank">Catarse</a>
+      <div class="dropdown">
+        <button class="dropbtn">Games</button>
+        <div class="dropdown-content">
+          <a href="jogos/cloyster.html">Jogo do Cloyster</a>
+          <a href="jogos/Bingo.html">Bingo</a>
+          <a href="jogos/ask.html">Pergunte ao T-bot</a>
+        </div>
+      </div>
+      <a href="../sobre.html">Sobre </a>
+    </div>
+  </header>
+
     <div class="container">
       <h1>Isekai Bingo</h1>
       <div class="square">
@@ -58,13 +74,24 @@
       //   arrayTile.push(`tile${i}`)
       // }
 
-      allDiv.forEach((index, array)=>{
-        index.addEventListener('click',(e)=>{
-          console.log(this)
-          index.classList.toggle('selected')
-          p[array].classList.toggle('bingo')
+        allDiv.forEach((index, array) => {
+          index.addEventListener('click', (e) => {
+
+
+
+            if (index.id == "kiriface") return
+            else if (index.className.includes("tile16")) {
+              setTimeout(() => {
+                index.classList.toggle('selected')
+                p[array].classList.toggle('bingo')
+              }, 3500)
+            }
+            else {
+              index.classList.toggle('selected')
+              p[array].classList.toggle('bingo')
+            }
+          })
         })
-      })
 
       // const reloadi = () =>{
 
