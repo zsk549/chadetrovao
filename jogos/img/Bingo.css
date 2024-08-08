@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 :root {
-  --b1: #1c1c1b;
+  --b1: #e4e4e4;
   --b2: #252625;
-  --c1: #484a49;
+  --c1: #929493;
   --w1: #edf0ee;
   --w2: #d4d9d5;
   --w3: #bec2bf;
@@ -13,6 +14,87 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* header start  */
+
+header{
+position: absolute;
+top: 0;
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: flex-end;
+background-color:  var(--w2);
+padding-bottom: 20px;
+z-index: 10000;
+border-bottom: 5px solid var(--w1);
+margin-bottom: 0;
+}
+header .navbar{
+display: flex;
+align-items: flex-end;
+
+flex-wrap: wrap;
+gap: 15px;
+}
+header .navbar a{
+text-decoration: none;
+text-align: center;
+padding: 10px 40px;
+margin: 10px 0 0 0 ;
+color: var(--c1);
+background-color: transparent;
+border: none;
+font-family: "Poppins", sans-serif !important;
+font-weight: 120 !important;
+font-style: normal !important;
+}
+.dropdown{
+display: flex;
+justify-content: center;
+
+}
+.dropdown button{
+text-decoration: none;
+text-align: center;
+padding: 12px 48px;
+margin: 10px 0 0 0 ;
+color: #ffffff;
+border: none;
+background-color: transparent;
+font-family: "Press Start 2P", system-ui;
+font-weight: 400;
+font-style: normal;
+
+}
+.dropdown-content{
+display: none;
+position: absolute ;
+margin: 0px 10px;
+cursor: pointer;
+background-color: var(--b1)!important; 
+gap: 5px;
+padding: 20px 10px;
+}
+.dropdown:hover .dropdown-content{
+display: flex;
+flex-direction: column; 
+
+}
+header .navbar> *:not(div):hover{
+background-color: var(--w1);
+}
+.dropdown-content a:hover {
+background-color: var(--w1);
+}
+.dropbtn{
+border: none;
+cursor: default;
+
+}
+/* Header end  */
 body{
   width: 100%;
   display: flex;
