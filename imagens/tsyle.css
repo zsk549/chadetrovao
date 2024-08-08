@@ -201,7 +201,7 @@ main{
 	margin-inline: auto;
 	margin-bottom: -250px;
    	width: 100%;
-    max-height: 800px;
+    min-height: 800px;
     	  padding: 30px;
     position: relative;
 		
@@ -435,6 +435,7 @@ a:has(button){
 	    justify-content: center;
 	    align-items: center;
         width: 100%;
+        
         
     }
     .wrapper{
