@@ -98,8 +98,8 @@ header .navbar> *:not(div):hover{
     background-color:transparent;
     backdrop-filter: blur(7px);
     margin: 50px auto;
-    width: auto;
-    height: 80vh;
+    width: 85%;
+    height: 65vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -335,11 +335,6 @@ footer{
 }
 
 
-#spline{
-    scale: 1.2;
-}
-
-
 
 .wrapper{
     position: absolute;
@@ -365,8 +360,34 @@ footer{
     100%{opacity: 0; transform: translateY(-40vh) scale(0.1) rotate(1080deg);}
 }
 
-
-
+.logo{
+    position: relative;
+}
+.btns{
+    position: absolute;
+    bottom: 18px;
+    right: 20px;
+    z-index: 9999;
+}
+.btn{
+    all: unset;
+    padding: 5px 30px;
+    border-radius: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.171);
+}
+.btn:hover{
+     color: rgb(192, 192, 192);
+}
+a:has(button){
+    text-decoration: none;
+    color: white;
+}
+.GoYT{
+    background-color: #f44336;
+}
+.GoTW{
+    background-color: #673ab7;
+}
 
 
 
