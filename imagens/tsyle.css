@@ -428,7 +428,9 @@ a:has(button){
     padding: 20px 10px;
 }
  .container{
-        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     .container2 {
         flex-direction: column;
