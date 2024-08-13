@@ -201,7 +201,7 @@ main{
 	margin-inline: auto;
 	margin-bottom: -250px;
    	width: 100%;
-    min-height: 800px;
+    max-height: 800px;
     	  padding: 30px;
     position: relative;
 		
